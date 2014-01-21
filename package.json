@@ -1,0 +1,13 @@
+{
+	"name": "btc-ticker",
+	"version": "0.0.1",
+	"license": "MIT",
+	"main": "src/btc-ticker.js",
+	"author":"Reece Robinson <reecekrobinson@gmail.com> (reece-robinson.com)",
+	"dependencies":{
+		"request": "*"
+	},
+	"devDependencies":{
+		"nodeunit": "*"
+	}
+}
