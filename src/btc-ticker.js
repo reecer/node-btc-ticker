@@ -1,8 +1,45 @@
 var	request = require('request');
-// var Bitstamp = require('bitstamp'),
-// 	CampBX = require('campbx'),
-// CampBX.prototype.name = "CBX";
-// Bitstamp.prototype.name = 'BSTP';
+
+
+var Coinbase = new Market('https://coinbase.com/api/v1/', {
+	ticker: 'prices/sell'
+}, 'CNBS');
+
+var BTCe = new Market('https://btc-e.com/api/3/', {
+	ticker: 'ticker/btc_usd'
+}, 'BTCe');
+
+var MtGox = new Market('http://data.mtgox.com/api/1/', {
+	ticker: 'BTCUSD/ticker'
+}, 'GOX');
+
+var Bitstamp = new Market('https://www.bitstamp.net/api/', {
+	ticker: 'ticker'
+}, 'BSTP');
+
+var Bitfinex = new Market('https://api.bitfinex.com/v1/', {
+	ticker: 'ticker/btcusd' 
+}, 'BTFX');
+
+var CampBX = new Market('http://campbx.com/api/', {
+	ticker: 'xticker.php'
+}, 'CPBX');
+
+var exchanges = [
+	Coinbase, 
+	BTCe,
+	MtGox,
+	Bitstamp,
+	Bitfinex,
+	CampBX
+];
+
+
+module.exports.all = exchanges;
+exchanges.forEach(function(ex){
+	module.exports[ex.name] = ex;
+});
+
 
 function Market(baseUrl, routes, name){
 	this.name = name || '';
@@ -27,31 +64,3 @@ function Market(baseUrl, routes, name){
 		}
 	}
 }
-
-var Coinbase = new Market('https://coinbase.com/api/v1/', {
-	ticker: 'prices/sell'
-}, 'CNBS');
-
-var BTCe = new Market('https://btc-e.com/api/3/', {
-	ticker: 'ticker/btc_usd'
-}, 'BTCe');
-
-var MtGox = new Market('http://data.mtgox.com/api/1/', {
-	ticker: 'BTCUSD/ticker'
-}, 'GOX');
-
-var Bitstamp = new Market('https://www.bitstamp.net/api/', {
-	ticker: 'ticker'
-}, 'BSTP');
-
-var exchanges = [
-	Coinbase, 
-	BTCe,
-	MtGox,
-	Bitstamp
-];
-
-exchanges.forEach(function(ex){
-	module.exports[ex.name] = ex;
-});
-module.exports.all = exchanges;
