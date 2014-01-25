@@ -1,7 +1,7 @@
 {
   "name": "btc-ticker",
   "description": "Simple wrapper for ticker queries to a few common bitcoin exchanges.",
-  "version": "0.1.0",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "src/btc-ticker.js",
   "author": "Reece Robinson <reecekrobinson@gmail.com> (reece-robinson.com)",
