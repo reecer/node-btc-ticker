@@ -1,4 +1,4 @@
-var	request = require('request');
+var request = require('request');
 
 
 var Coinbase = new Market('https://coinbase.com/api/v1/', {
@@ -35,11 +35,10 @@ var exchanges = [
 ];
 
 
-module.exports.all = exchanges;
 exchanges.forEach(function(ex){
 	module.exports[ex.name] = ex;
 });
-
+module.exports.forEach = Array.prototype.forEach.bind(exchanges);
 
 function Market(baseUrl, routes, name){
 	this.name = name || '';
