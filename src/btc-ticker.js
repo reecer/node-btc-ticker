@@ -39,6 +39,7 @@ exchanges.forEach(function(ex){
 	module.exports[ex.name] = ex;
 });
 module.exports.forEach = Array.prototype.forEach.bind(exchanges);
+module.length = exchanges.length;
 
 function Market(baseUrl, routes, name){
 	this.name = name || '';
