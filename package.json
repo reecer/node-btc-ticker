@@ -1,18 +1,18 @@
 {
-	"name": "btc-ticker",
-	"description": "Simple wrapper for ticker queries to a few common bitcoin exchanges.",
-	"version": "0.0.1",
-	"license": "MIT",
-	"main": "src/btc-ticker.js",
-	"author":"Reece Robinson <reecekrobinson@gmail.com> (reece-robinson.com)",
-	"repository":{
-		"type": "git",
-		"url": "http://github.com/reecer/node-btc-ticker"
-	},
-	"dependencies":{
-		"request": "*"
-	},
-	"devDependencies":{
-		"nodeunit": "*"
-	}
+  "name": "btc-ticker",
+  "description": "Simple wrapper for ticker queries to a few common bitcoin exchanges.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "src/btc-ticker.js",
+  "author": "Reece Robinson <reecekrobinson@gmail.com> (reece-robinson.com)",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/reecer/node-btc-ticker"
+  },
+  "dependencies": {
+    "request": "*"
+  },
+  "devDependencies": {
+    "nodeunit": "*"
+  }
 }
