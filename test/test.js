@@ -2,7 +2,7 @@
 
 var btc = require('../src/btc-ticker.js');
 
-btc.all.forEach(function(exch){
+btc.forEach(function(exch){
 	// Each exchange is a test group. Add to exports
 	var group = exports[exch.name] = {};
 	// Loop thru api routes
