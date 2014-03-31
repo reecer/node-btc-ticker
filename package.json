@@ -4,7 +4,7 @@
   "version": "0.0.3",
   "license": "MIT",
   "main": "src/btc-ticker.js",
-  "author": "Reece Robinson <reecekrobinson@gmail.com> (reece-robinson.com)",
+  "author": "Reece Robinson <reecekrobinson@gmail.com> (reecer.org)",
   "repository": {
     "type": "git",
     "url": "http://github.com/reecer/node-btc-ticker"
